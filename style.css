@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --primary-color: #EAEFBD;
+    --seconadry-color: #C9E3AC;
+    --tertiary-color: #90BE6D;
+    --snake-food: rgb(255, 37, 37);
+    --snake-body: #197278;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--primary-color);
+}
+
+.title {
+    margin-bottom: 1rem;
+}
+
+.title h2 {
+    font-size: 2.5rem;
+}
+
+.wrapper {
+    width: 30rem;
+    height: auto;
+    background-color: var(--tertiary-color);
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-details {
+    width: auto;
+    height: auto;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-details p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.play-board {
+    height: 30rem;
+    background-color: var(--seconadry-color);
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.snake-food {
+    background-color: var(--snake-food);
+}
+
+.snake-head {
+    background-color: var(--snake-body);
+}
+
+.mobile-controls {
+    display: none;
+    height: auto;
+    margin-top: 1rem;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.mobile-controls i {
+    font-size: 1.5rem;
+    text-align: center;
+    width: calc(100% / 4);
+    cursor: pointer;
+}
+
+.fa-arrow-left, .fa-arrow-up, .fa-arrow-down{
+    border-right: 1px solid black;
+}
+
+.fa-solid .fa-arrow-right {
+    border: none;
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        margin-bottom: 2.5rem;
+    }
+
+    .title h2 {
+        font-size: 2rem;
+    }
+
+    .wrapper {
+        width: 25rem;
+        margin-top: -2rem;
+    }
+
+    .game-details p {
+        font-size: 1.1rem;
+    }
+
+    .play-board {
+        height: 25rem;
+        grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    }
+
+    .mobile-controls {
+        display: flex;
+    }
+
+    .mobile-controls i {
+        font-size: 1.5rem;
+        text-align: center;
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .title {
+        margin-bottom: 2.5rem;
+    }
+
+    .title h2 {
+        font-size: 2rem;
+    }
+
+    .wrapper {
+        width: 20rem;
+        margin-top: -2rem;
+    }
+
+    .game-details p {
+        font-size: 1rem;
+    }
+
+    .play-board {
+        height: 20rem;
+        grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    }
+
+    .mobile-controls {
+        display: flex;
+    }
+
+    .mobile-controls i {
+        font-size: 1.2rem;
+        text-align: center;
+        width: calc(100% / 4);
+    }
+}
